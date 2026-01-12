@@ -1,0 +1,169 @@
+/* Base */
+body {
+  background-color: #080218;
+  color: #f2f2f7;
+  overflow-x: hidden;
+}
+
+/* Global Border Width Override */
+.border { border-width: 2px; }
+.border-t { border-top-width: 2px; }
+.border-b { border-bottom-width: 2px; }
+.border-l { border-left-width: 2px; }
+.border-r { border-right-width: 2px; }
+
+.hyper-void {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #120835 0%, #080218 100%);
+  z-index: -2;
+}
+
+.hyper-void::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background-image:
+    radial-gradient(1.5px 1.5px at 15% 25%, #fff, transparent),
+    radial-gradient(2px 2px at 45% 65%, #00F5FF, transparent),
+    radial-gradient(2.5px 2.5px at 75% 35%, #9D4EDD, transparent),
+    radial-gradient(1.5px 1.5px at 25% 85%, #fff, transparent),
+    radial-gradient(2px 2px at 85% 15%, #00F5FF, transparent);
+  background-size: 500px 500px;
+  animation: drift 150s linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes drift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 800px 800px; }
+}
+
+.neon-glow-accent {
+  text-shadow: 0 0 15px rgba(0, 245, 255, 0.7), 0 0 30px rgba(0, 245, 255, 0.3);
+}
+
+.crt-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.08) 50%);
+  z-index: 1000;
+  background-size: 100% 4px;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+/* Moving Grid Background */
+.retro-grid {
+  background-image:
+    linear-gradient(to right, rgba(0, 245, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 245, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+/* Grain Overlay (behind content) 
+.grain-overlay {
+  position: fixed;
+  top: -150%;
+  left: -150%;
+  width: 400%;
+  height: 400%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.22' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+  animation: grain-flicker 0.2s steps(4) infinite;
+  mix-blend-mode: screen;
+}
+
+
+@keyframes grain-flicker {
+  0% { background-position: 0% 0%; }
+  20% { background-position: -10% 5%; }
+  40% { background-position: 15% -10%; }
+  60% { background-position: -5% 15%; }
+  80% { background-position: 10% 10%; }
+  100% { background-position: 5% -5%; }
+}
+
+*/
+
+.btn-primary {
+  position: relative;
+  background: rgba(0, 245, 255, 0.1);
+  border: 2px solid rgba(0, 245, 255, 0.6);
+  color: #00F5FF;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  backdrop-filter: blur(8px);
+}
+.btn-primary:hover, .btn-primary:focus-visible {
+  background: #00F5FF;
+  color: #050110;
+  box-shadow: 0 0 50px rgba(0, 245, 255, 0.5);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.card-glow { position: relative; transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+.card-glow::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #00F5FF, transparent, #9D4EDD);
+  z-index: -1;
+  opacity: 0.45;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  filter: blur(20px);
+  border-radius: inherit;
+}
+.card-glow:hover::after { opacity: 0.8; transform: scale(1.02); }
+
+:focus-visible { outline: 2px solid #00F5FF; outline-offset: 4px; }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #00F5FF;
+  color: #050110;
+  padding: 8px;
+  z-index: 10000;
+  transition: top 0.3s;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.skip-link:focus { top: 0; }
+
+.section-divider {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, rgba(0, 245, 255, 0.4), rgba(178, 112, 255, 0.4), transparent);
+  position: relative;
+  overflow: hidden;
+}
+.section-divider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0), rgba(0, 245, 255, 0.6), rgba(255, 255, 255, 0.8), rgba(178, 112, 255, 0.6), rgba(255, 255, 255, 0), transparent);
+  filter: blur(4px);
+  animation: shimmer 5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+/* Optional: a small helper for the scan bar in the Hero HUD */
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(500%); }
+}

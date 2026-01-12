@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Void | Retro Gaming</title>
+
+    <!-- Tailwind via CDN (no build step). If your host blocks external CDNs, remove this and rely only on styles.css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind config (kept from your original index.html) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              void: '#080218',
+              voidPurple: '#B270FF',
+              voidAccent: '#00F5FF',
+              voidWhite: '#F2F2F7',
+              voidDark: '#0D0826',
+            },
+            fontFamily: {
+              sans: ['Space Grotesk', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scan': 'scan 3s linear infinite',
+              'shimmer': 'shimmer 6s ease-in-out infinite',
+              'grid-move': 'grid-move 20s linear infinite',
+              'grain-flicker': 'grain 0.4s steps(6) infinite',
+            },
+            keyframes: {
+              scan: { '0%': { left: '-10%' }, '100%': { left: '110%' } },
+              shimmer: { '0%': { transform: 'translateX(-100%)' }, '100%': { transform: 'translateX(200%)' } },
+              'grid-move': { '0%': { transform: 'translateY(0)' }, '100%': { transform: 'translateY(40px)' } },
+              'grain': {
+                '0%': { backgroundPosition: '0% 0%' },
+                '20%': { backgroundPosition: '-10% 5%' },
+                '40%': { backgroundPosition: '15% -10%' },
+                '60%': { backgroundPosition: '-5% 15%' },
+                '80%': { backgroundPosition: '10% 10%' },
+                '100%': { backgroundPosition: '5% -5%' },
+              }
+            }
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="font-sans antialiased text-voidWhite selection:bg-voidAccent selection:text-void">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="hyper-void" aria-hidden="true"></div>
+  <!--  <div class="grain-overlay" aria-hidden="true"></div> -->
+    <div class="crt-overlay" aria-hidden="true"></div>
+
+    <!-- App mount -->
+    <div id="root"></div>
+
+    <!-- Data + App -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
