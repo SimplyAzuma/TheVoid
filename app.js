@@ -91,7 +91,7 @@
   `;
 
   const Hero = () => `
-    <section id="main-content" class="relative min-h-screen flex items-center pt-28 pb-16 px-6 overflow-hidden bg-void">
+    <section id="main-content" class="section-layer relative min-h-screen flex items-center pt-28 pb-16 px-6 overflow-x-hidden bg-void">
       <!-- Background Layering -->
       <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
         <video autoplay muted loop playsinline class="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-20 scale-125 saturate-0">
@@ -203,7 +203,7 @@
     ];
 
     return `
-      <section id="services" class="py-32 px-6 relative overflow-hidden" aria-labelledby="features-heading">
+      <section id="services" class="section-layer py-32 px-6 relative overflow-x-hidden" aria-labelledby="features-heading">
         <div class="absolute inset-0 retro-grid animate-grid-move opacity-20" aria-hidden="true"></div>
         <div class="grain-overlay" aria-hidden="true"></div>
         <div class="absolute top-1/2 left-0 w-[600px] h-[600px] bg-voidPurple/15 blur-[180px] -translate-y-1/2" aria-hidden="true"></div>
@@ -246,7 +246,7 @@
   };
 
   const ConsoleShowcase = () => `
-    <section id="consoles" class="py-32 px-6 relative bg-void/50 border-t border-white/10 overflow-hidden" aria-labelledby="consoles-heading">
+    <section id="consoles" class="section-layer py-32 px-6 relative bg-void/50 border-t border-white/10 overflow-x-hidden" aria-labelledby="consoles-heading">
       <div class="grain-overlay" aria-hidden="true"></div>
       <div class="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-voidAccent/5 blur-[120px] animate-pulse-slow" aria-hidden="true"></div>
       <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-voidPurple/5 blur-[150px] animate-pulse-slow delay-1000" aria-hidden="true"></div>
@@ -302,7 +302,7 @@
   `;
 
   const GamesShowcase = () => `
-    <section id="games" class="py-32 px-6 bg-void border-t border-white/10 relative overflow-hidden" aria-labelledby="games-heading">
+    <section id="games" class="section-layer py-32 px-6 bg-void border-t border-white/10 relative overflow-x-hidden" aria-labelledby="games-heading">
       <div class="absolute inset-0 retro-grid opacity-10" aria-hidden="true"></div>
       <div class="grain-overlay" aria-hidden="true"></div>
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-voidAccent/[0.06] blur-[250px] pointer-events-none" aria-hidden="true"></div>
@@ -378,7 +378,7 @@
   `;
 
   const Contact = () => `
-    <section id="contact" class="py-40 px-6 relative overflow-hidden bg-void border-t border-white/10" aria-labelledby="contact-heading">
+    <section id="contact" class="section-layer py-40 px-6 relative overflow-x-hidden bg-void border-t border-white/10" aria-labelledby="contact-heading">
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-voidAccent/10 blur-[280px] pointer-events-none" aria-hidden="true"></div>
       <div class="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-voidPurple/5 blur-[200px] pointer-events-none" aria-hidden="true"></div>
 
@@ -450,7 +450,7 @@
   `;
 
   const Footer = () => `
-    <footer class="py-24 px-6 border-t border-white/10 bg-void/80 backdrop-blur-md relative overflow-hidden" role="contentinfo">
+    <footer class="section-layer py-24 px-6 border-t border-white/10 bg-void/80 backdrop-blur-md relative overflow-x-hidden" role="contentinfo">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-20 relative z-10">
         <div class="space-y-8 text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start gap-6">
