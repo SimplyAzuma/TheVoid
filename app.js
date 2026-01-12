@@ -94,7 +94,7 @@
     <section id="main-content" class="section-layer relative min-h-screen flex items-center pt-28 pb-16 px-6 overflow-x-hidden bg-void">
       <!-- Background Layering -->
       <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <video autoplay muted loop playsinline class="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-20 scale-125 saturate-0">
+        <video autoplay muted loop playsinline class="hero-video absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-20 scale-125 saturate-0">
           <source src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-a-star-field-in-outer-space-40351-large.mp4" type="video/mp4" />
         </video>
         <div class="absolute inset-0 bg-gradient-to-b from-void via-void/40 to-void"></div>
